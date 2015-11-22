@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>孙燕姿照片墙</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico" meta="screen">
+    <style>
+        h1{
+            margin: 60px auto 10px;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-family: 微软雅黑;
+            color: cornflowerblue;
+        }
+        .main{
+            width: 800px;
+            height: 500px;
+            /*background: #eeeeee;*/
+            margin: 80px auto;
+            position: relative;
+        }
+        .main img{
+            padding: 10px 10px 15px;
+            background: #fff;
+            position: absolute;
+        }
+        .main .pic1{
+            left: 10px;
+            top: 0px;
+            width: 250px;
+            height: 230px;
+            transform: rotate(-10deg);
+        }
+        .main .pic2{
+            left: 250px;
+            top: -10px;
+            transform: rotate(15deg);
+        }
+        .main .pic3{
+            left: 480px;
+            top: 5px;
+            width: 300px;
+            height: 220px;
+            transform: rotate(10deg);
+            z-index: 2;
+        }
+        .main .pic4{
+            left: 0px;
+            top: 200px;
+            width: 250px;
+            height: 250px;
+            transform: rotate(15deg);
+        }
+        .main .pic5{
+            left: 210px;
+            top: 180px;
+            transform: rotate(-13deg);
+        }
+        .main .pic6{
+            left: 400px;
+            top: 180px;
+            transform: rotate(20deg);
+            z-index: 3;
+        }
+        .main .pic7{
+            left: 550px;
+            top: 250px;
+            width: 300px;
+            height: 220px;
+            transform: rotate(-15deg);
+        }
+        .main img{
+            transition: all 0.5s;
+        }
+        .main img:hover{
+            transform: scale(1.3,1.3);
+            z-index: 5;
+            box-shadow: 0 0 10px #ccc;
+        }
+        .back{
+            width: 100px;
+            height: 40px;
+            background: #eeeeee;
+            margin:50px auto;
+        }
+        .back a{
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            color: #000;
+            text-decoration: none;
+            display: block;
+            font-family: 微软雅黑;
+        }
+        .back a:hover{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>孙燕姿照片墙</h1>
+    <div class="main">
+        <img src="image/stefanie01.jpg" class="pic1">
+        <img src="image/Stefanie02.jpg" class="pic2">
+        <img src="image/Stefanie03.jpg" class="pic3">
+        <img src="image/Stefanie04.jpg" class="pic4">
+        <img src="image/Stefanie05.jpg" class="pic5">
+        <img src="image/Stefanie06.jpg" class="pic6">
+        <img src="image/Stefanie07.jpg" class="pic7">
+    </div>
+    <div class="back"><a href="css3effect.html">返回上一页</a></div>
+</body>
+</html>

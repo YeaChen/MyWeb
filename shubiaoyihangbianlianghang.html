@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鼠标一行变两行效果</title>
+    <link rel="shortcut icon" href="image/bitbug_favicon.ico" media="screen" type="image/x-icon">
+    <style>
+        *{margin: 0px;padding: 0px}
+        #icon{width: 1200px;height: 320px;margin: 100px auto;
+            /*background: red;*/
+        }
+        .list1{margin: 0px 8px; width: 280px;height: 318px;border: 1px solid #ddd;float: left}
+        .list1 h3{
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background: #eee;
+        }
+        .ul1{
+            margin-top: 10px;
+        }
+        .li1{
+            margin: 5px 20px ;
+            list-style: none;
+            font-family: 微软雅黑;
+            height: auto;
+        }
+        .title{
+            height: 30px;
+        }
+        .title span{
+            margin-right: 10px;
+        }
+        .content{
+            width: 240px;
+            height: 100px;
+            display: none;
+            cursor: pointer;
+        }
+        .content img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .content .list2{
+            float: right;
+            width: 120px;
+            height: 100px;
+            text-align: center;
+            list-style: none;
+            cursor: pointer;
+        }
+        .content .list2 ul{
+            list-style: none;
+            cursor: pointer;
+        }
+        .back{
+            width: 100px;
+            height: 40px;
+            background: #eeeeee;
+            margin:50px auto;
+        }
+        .back a{
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            color: #000;
+            text-decoration: none;
+            display: block;
+            font-family: 微软雅黑;
+        }
+        .back a:hover{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="icon">
+        <div class="list1">
+            <h3>人气品牌</h3>
+            <ul class="ul1">
+                <li class="li1">
+                    <p class="title">
+                        <span>1</span>雅诗兰黛
+                    </p>
+                    <div class="content" style="display: none">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>雅诗兰黛</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>2</span>兰芝
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰芝</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>3</span>兰蔻
+
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰蔻</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>4</span>欧莱雅
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>欧莱雅</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>5</span>倩碧
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>倩碧</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list1">
+            <h3>人气品牌</h3>
+            <ul class="ul1">
+                <li class="li1">
+                    <p class="title">
+                        <span>1</span>雅诗兰黛
+                    </p>
+                    <div class="content" style="display: none">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>雅诗兰黛</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>2</span>兰芝
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰芝</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>3</span>兰蔻
+
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰蔻</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>4</span>欧莱雅
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>欧莱雅</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>5</span>倩碧
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>倩碧</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list1">
+            <h3>人气品牌</h3>
+            <ul class="ul1">
+                <li class="li1">
+                    <p class="title">
+                        <span>1</span>雅诗兰黛
+                    </p>
+                    <div class="content" style="display: none">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>雅诗兰黛</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>2</span>兰芝
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰芝</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>3</span>兰蔻
+
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰蔻</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>4</span>欧莱雅
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>欧莱雅</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>5</span>倩碧
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>倩碧</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list1">
+            <h3>人气品牌</h3>
+            <ul class="ul1">
+                <li class="li1">
+                    <p class="title">
+                        <span>1</span>雅诗兰黛
+                    </p>
+                    <div class="content" style="display: none">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>雅诗兰黛</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>2</span>兰芝
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰芝</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>3</span>兰蔻
+
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>兰蔻</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>4</span>欧莱雅
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>欧莱雅</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="li1">
+                    <p class="title">
+                        <span>5</span>倩碧
+                    </p>
+                    <div class="content">
+                        <img src="image/stefanie01.jpg">
+                        <div class="list2">
+                            <ul>
+                                <li>倩碧</li>
+                                <li>产品款</li>
+                                <li>关注数</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="back"><a href="jseffect.html">返回上一页</a></div>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script>
+        $(".li1").hover(function () {
+            $(this).find(".content").show().parent().siblings(".li1").find(".content").hide();
+            $(this).find(".title").hide().parent().siblings(".li1").find(".title").show();
+        }, function () {
+            $(this).find(".content").hide();
+            $(this).find(".title").show();
+        })
+    </script>
+</body>
+</html>

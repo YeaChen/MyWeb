@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS3效果</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico" media="screen">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .head{
+            height: 210px;
+            /*background-color: chartreuse;*/
+        }
+        .head .pic{
+            height: 150px;
+            width: 80%;
+            /*border-bottom: 2px solid #000;*/
+            margin: 10px auto;
+            box-shadow: 0px 0px 1px #000 ,
+            0px 0px 1px  #000 inset;
+            position: relative;
+            background: #ffffff;
+        }
+        .head .pic:after,.head .pic:before{
+            content: "";
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 0px;
+            /*background: red;*/
+            position: absolute;
+            border-radius: 100px/10px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.8);
+            z-index: -1;
+        }
+        .head .pic p{
+            width: 550px;
+            height: 100px;
+            margin: 0px auto;
+            padding-top: 50px;
+            font-family: 仿宋;
+            font-size: 40px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px #000,
+            2px 2px 10px #eee,
+            5px 5px 10px gray  ;
+            position: relative;
+            margin: 0px auto;
+            word-spacing: 1px;
+            text-align: center;
+        }
+        .head .title{
+            height: 50px;
+            font-family:微软雅黑;
+            background-color: #add8e6;
+        }
+        .head .title div{
+            float: left;
+            line-height: 50px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            word-spacing: 1px;
+        }
+        .head .title ul{
+            height: 50px;
+            float: right;
+            line-height: 50px;
+        }
+        .head .title ul li{
+            width: 70px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 20px;
+        }
+        .head .title ul li a{text-decoration: none;color:#000;line-height: 50px;text-align: center;width: 50px}
+        .head .title ul li a:hover{
+            color: #ffffff;
+
+        }
+        .main{
+            width: 850px;
+            height: 1200px;
+            margin: 0px auto;
+            background: #eeeeee;
+        }
+        .main a{
+            text-decoration: none;
+        }
+        .main a div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            float: left;
+            margin-left: 60px;
+            margin-top: 30px;
+            font-family: 微软雅黑;
+            font-weight: 600;
+            color: #000;
+            text-align: center;
+            line-height: 200px;
+            opacity: 0.7;
+        }
+        .main a div:hover{
+            opacity: 1;
+            font-size: 20px;
+            background: #dddddd;
+        }
+        .foot{
+            height: 150px;
+            background-color: darkgreen;
+            opacity: 0.5;
+        }
+        .foot ul{
+            width: 600px;
+            height: 30px;
+            margin: 0px auto;
+        }
+        .foot ul li{
+            width: 100px;
+            height: 20px;
+            float: left;
+            margin: 30px 50px 20px 50px;
+        }
+        .foot li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 微软雅黑;
+        }
+        .foot ul li a:hover{
+            color: #000;
+            opacity: 1;
+        }
+        .foot .p1{
+            color: #ffffff;
+            margin: 10px auto;
+            clear: both;
+            width:200px;
+            text-align: center;
+            line-height: 20px;
+            height: 20px;
+        }
+        .foot .p2{
+            width: 800px;
+            margin: 5px auto;
+            color: #ffffff;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="pic"><p>CSS3效果：阴影及动画</p></div>
+        <div class="title">
+            <div>Mr Bigshot</div>
+            <ul>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="1202.html">我的寝室</a></li>
+                <li><a href="selfintroduce.html">个人简历</a></li>
+                <li><a href="myblog.html">我的博客</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <a href="shadow.html"><div>曲线阴影和翘边阴影</div></a>
+        <a href="photo-wall.html"><div>简单照片墙</div></a>
+        <a href="cssmouseover.html"><div>鼠标悬停效果</div></a>
+        <a href="zuoceerjixuanfucaidan.html"><div>左侧二级悬浮菜单</div></a>
+        <a><div>loading</div></a>
+        <a><div>loading</div></a>
+        <a><div>loading</div></a>
+        <a><div>loading</div></a>
+        <a><div>loading</div></a>
+        <a><div>loading</div></a>
+        <a><div>loading</div></a>
+    </div>
+    <footer class="foot">
+        <ul>
+            <li><a href="http://weibo.com/Mrbigshotday/profile?rightmod=1&wvr=6&mod=personinfo">我的微博</a></li>
+            <li><a href="#">我的推特</a></li>
+            <li><a href="http://tieba.baidu.com/home/main?un=Mrbigshotday&fr=index">我的贴吧</a></li>
+        </ul>
+        <p class="p1">@Mr Bigshot</p>
+        <p class="p2">本网站只作为学习网站，而非商业用途网站。网站资源均来自于互联网。如果本网站的内容侵犯了您的专利或者权益，请联系QQ:1432914819，我们将立即处理。谢谢！</p>
+    </footer>
+</body>
+</html>

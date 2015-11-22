@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css鼠标移动特效</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .head{
+            height: 210px;
+            /*background-color: chartreuse;*/
+        }
+        .head .pic{
+            height: 150px;
+            width: 80%;
+            /*border-bottom: 2px solid #000;*/
+            margin: 10px auto;
+            box-shadow: 0px 0px 1px #000 ,
+            0px 0px 1px  #000 inset;
+            position: relative;
+            background: #ffffff;
+        }
+        .head .pic:after,.head .pic:before{
+            content: "";
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 0px;
+            /*background: red;*/
+            position: absolute;
+            border-radius: 100px/10px;
+            box-shadow: 0 0px 10px #000;
+            z-index: -1;
+        }
+        .head .pic p{
+            width: 550px;
+            height: 100px;
+            margin: 0px auto;
+            padding-top: 50px;
+            font-family: 仿宋;
+            font-size: 40px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px #000,
+            2px 2px 10px #eee,
+            5px 5px 10px gray  ;
+            position: relative;
+            margin: 0px auto;
+            word-spacing: 1px;
+            text-align: center;
+        }
+        .head .title{
+            height: 50px;
+            font-family: 微软雅黑;
+            background-color: #add8e6;
+        }
+        .head .title div{
+            float: left;
+            line-height: 50px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            word-spacing: 1px;
+        }
+        .head .title ul{
+            height: 50px;
+            float: right;
+            line-height: 50px;
+        }
+        .head .title ul li{
+            width: 70px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 20px;
+        }
+        .head .title ul li a{text-decoration: none;color:#000;line-height: 50px;text-align: center;width: 50px}
+        .head .title ul li a:hover{
+            color: #ffffff;
+
+        }
+        .content{
+            width: 80%;
+            /*background: #eeeeee;*/
+            height: 1100px;
+            margin: 0px auto;
+        }
+        .div{
+            width: 300px;
+            height:300px;
+            margin: 25px;
+            float: left;
+            /*color: #ffffff;*/
+        }
+        .div .pic{
+            width: 300px;
+            height: 300px;
+            margin: 10px auto;
+            overflow: hidden;
+            background: #b8860b;
+            border: 5px solid #ffffff;
+            font-family: 微软雅黑;
+        }
+        .div .pic1{
+            position: relative;
+        }
+        .div .div1{
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            font-family: 微软雅黑;
+            margin: 0px auto;
+        }
+        .div .pic1 figcaption{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            /*font-family: 微软雅黑;*/
+        }
+        .div .pic1 figcaption p{
+            margin-top: 5px;
+            transform: translate(-100px);
+            width: 80px;
+            height: 23px;
+            background: #ffffff;
+            text-align: center;
+            line-height: 25px;
+            opacity: 0;
+            color: #000;
+        }
+        .pic1:hover img{
+            transform: translate(-50px,0px);
+            opacity: 0.9;
+        }
+        .pic1:hover figcaption p{
+            transform: translate(0px,0px);
+            opacity: 1;
+        }
+        .pic1 figcaption p,.pic1 img{
+            transition: all 0.5s;
+        }
+        .pic1 figcaption p:nth-of-type(1){
+            transition-delay: 0.05s;
+        }
+        .pic1 figcaption p:nth-of-type(2){
+            transition-delay: 0.1s;
+        }
+        .pic1 figcaption p:nth-of-type(3){
+            transition-delay: 0.15s;
+        }
+        .pic2{
+            background: #030;
+        }
+        .pic2{
+            position: relative;
+        }
+        .div2{
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border: 1px solid #000;
+            top: 30px;
+            left: 30px;
+            transform: translate(0,-270px) rotate(360deg);
+            opacity: 0;
+        }
+        .pic2 figcaption{
+            position:absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .pic2 figcaption p{
+            margin-top: 5px;
+            transform: translate(0,60px);
+            opacity: 0;
+        }
+        .pic2 .div2,.pic2 figcaption p{
+            transition: all 1s;
+        }
+        .pic2:hover img{
+            opacity: 0.8;
+        }
+        .pic2:hover .div2{
+            transform: translate(0px,0px) rotate(0deg);
+            opacity: 1;
+        }
+        .pic2:hover.pic2 figcaption p{
+            transform: translate(0px,0px);
+            opacity: 1;
+        }
+        .pic3{
+            background: #a52a2a;
+            position: relative;
+        }
+        .pic3 figcaption{
+            position: absolute;
+            top: 90px;
+            left: 50px;
+        }
+        .pic3 figcaption h3{
+            transform: skew(90deg);
+            opacity: 0;
+        }
+        .pic3 figcaption p{
+            transform: skew(90deg);
+            margin-top: 5px;
+            opacity: 0;
+        }
+        /*.pic3 figcaption h3,.pic3 figcaption p,img{*/
+        /*transition: all 0.1s;*/
+        /*}*/
+        .pic3:hover figcaption h3{
+            transform: skew(0deg);
+            opacity: 1;
+            transition-duration: 1s;
+        }
+        .pic3:hover figcaption p{
+            transform: skew(0deg);
+            opacity: 1;
+            transition-duration: 1s;
+        }
+        .pic3:hover img{
+            opacity: 0.8;
+            transition-duration: 1s;
+        }
+        .pic4{
+            background: #000;
+            position: relative;
+            /*width: 100%;*/
+            /*height: 100%;*/
+        }
+        .pic4 div{
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            border: 2px solid #000;
+            transform: scale(1.1,1.1);
+            opacity: 0;
+        }
+        .pic4 figcaption h3{
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            transform: scale(1.1,1.1);
+            opacity: 0;
+        }
+        .pic4 figcaption p{
+            position: absolute;
+            left: 40px;
+            top: 75px;
+            transform: scale(1.1,1.1);
+            opacity: 0;
+        }
+        .pic4 div,.pic4 figcaption h3,.pic4 figcaption p,.pic4 img{
+            transition: all 0.5s;
+        }
+        .pic4:hover div{
+            transform: scale(1,1);
+            opacity: 1;
+        }
+        .pic4:hover img{
+            transform: scale(1.1,1.1);
+            opacity: 0.8;
+        }
+        .pic4:hover figcaption h3{
+            transform: scale(1);
+            opacity: 1;
+        }
+        .pic4:hover figcaption p{
+            transform: scale(1);
+            opacity: 1;
+        }
+        .pic5{
+            background: #000;
+            position: relative;
+        }
+        .pic5 .d1{
+            border-bottom: 2px solid #fff;
+            border-top: 2px solid #ffffff;
+            width: 90%;
+            height: 60%;
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            transform: scale(0,1);
+            opacity: 0;
+        }
+        .pic5 .d2{
+            width: 80%;
+            height: 70%;
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            border-left: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: scale(1,0);
+            opacity: 0;
+        }
+        .pic5 figcaption h3{
+            position: absolute;
+            top: 10px;
+            left: 45px;
+        }
+        .pic5 figcaption p{
+            position: absolute;
+            top: 35px;
+            left: 45px;
+            opacity: 0;
+        }
+        .pic5 figcaption p,.pic5 figcaption h3,.pic5 .d1,.pic5 .d2,.pic5 img{
+            transition: all 0.5s;
+        }
+        .pic5:hover img{
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+        .pic5:hover .d1{
+            transform: scale(1,1);
+            opacity: 1;
+        }
+        .pic5:hover .d2{
+            transform: scale(1,1);
+            opacity: 1;
+        }
+        .pic5:hover figcaption h3{
+            transform: translate(0,60px);
+        }
+        .pic5:hover figcaption p{
+            transform: translate(0,60px);
+            opacity: 1;
+        }
+        .foot{
+            height: 150px;
+            background-color: #cd5c5c;
+            opacity: 0.5;
+        }
+        .foot ul{
+            width: 600px;
+            height: 30px;
+            margin: 0px auto;
+        }
+        .foot ul li{
+            width: 100px;
+            height: 20px;
+            float: left;
+            margin: 30px 50px 20px 50px;
+        }
+        .foot li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 微软雅黑;
+        }
+        .foot ul li a:hover{
+            color: #000;
+            opacity: 1;
+        }
+        .foot .p1{
+            color: #ffffff;
+            margin: 10px auto;
+            clear: both;
+            width:200px;
+            text-align: center;
+            line-height: 20px;
+            height: 20px;
+        }
+        .foot .p2{
+            width: 800px;
+            margin: 5px auto;
+            color: #ffffff;
+            text-indent: 2em;
+        }
+        .back{
+            width: 100px;
+            height:30px;
+            /*background: #eeeeee;*/
+            font-family: 微软雅黑;
+            margin: 0px auto;
+            padding-top: 30px;
+            clear: both;
+        }
+        .back a{
+            width: 100px;
+            height: 30px;
+            margin: 200px auto;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            display: block;
+            color: #000000;
+            background: #eeeeee;
+        }
+        .back:hover a{
+            background: gray;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<header class="head">
+    <div class="pic"><p>CSS3的鼠标悬停效果展示</p></div>
+    <div class="title">
+        <div>Mr Bigshot</div>
+        <ul>
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="1202.html">我的寝室</a></li>
+            <li><a href="selfintroduce.html">个人简历</a></li>
+            <li><a href="myblog.html">我的博客</a></li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <div class="div">
+        <figure class="pic1 pic">
+            <img src="image/Stefanie03.jpg">
+            <figcaption>
+                <h4>标题</h4>
+                <p>图片注释1</p>
+                <p>图片注释2</p>
+                <p>图片注释3</p>
+            </figcaption>
+        </figure>
+        <div class="div1">效果1</div>
+    </div>
+    <div class="div main">
+        <figure class="pic2 pic">
+            <img src="image/Stefanie03.jpg">
+            <figcaption>
+                <h3>旋转效果</h3>
+                <p>图片注释1</p>
+            </figcaption>
+            <div class="div2"></div>
+        </figure>
+        <div class="div1">旋转框</div>
+    </div>
+    <div class="div">
+        <figure class="pic3 pic">
+            <img src="image/Stefanie03.jpg">
+            <figcaption>
+                <h3>斜切效果</h3>
+                <p>图片注释1</p>
+            </figcaption>
+        </figure>
+        <div class="div1">斜切</div>
+    </div>
+    <div class="div">
+        <figure class="pic4 pic">
+            <img src="image/Stefanie03.jpg">
+            <figcaption>
+                <h3>缩放</h3>
+                <p>图片注释1</p>
+            </figcaption>
+            <div></div>
+        </figure>
+        <div class="div1">缩放</div>
+    </div>
+    <div class="div">
+        <figure class="pic5 pic">
+            <img src="image/Stefanie03.jpg">
+            <figcaption>
+                <h3>井字</h3>
+                <p>图片注释1</p>
+            </figcaption>
+            <div class="d1"></div>
+            <div class="d2"></div>
+        </figure>
+        <div class="div1">井字格</div>
+    </div>
+    <div class="back"><a href="css3effect.html">返回上一页</a></div>
+</div>
+<footer class="foot">
+    <ul>
+        <li><a href="http://weibo.com/Mrbigshotday/profile?rightmod=1&wvr=6&mod=personinfo">我的微博</a></li>
+        <li><a href="#">我的推特</a></li>
+        <li><a href="http://tieba.baidu.com/home/main?un=Mrbigshotday&fr=index">我的贴吧</a></li>
+    </ul>
+    <p class="p1">@Mr Bigshot</p>
+
+    <p class="p2">本网站只作为学习网站，而非商业用途网站。网站资源均来自于互联网。如果本网站的内容侵犯了您的专利或者权益，请联系QQ:1432914819，我们将立即处理。谢谢！</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico" media="screen">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: darkgrey;
+        }
+        .main{
+            width: 80%;
+            background-color: #ffffff;
+            /*z-index: 2;*/
+            margin: 0px auto;
+            height: 1100px;
+        }
+        .main header .img{
+            background: url("image/huanfu/5.jpg") no-repeat -50px -400px;
+            width: 100%;
+            height: 200px;
+        }
+        .main header .nav{
+            width: 100%;
+            height: 30px;
+            background: grey;
+        }
+        .main header .nav ul{
+            float: right;
+        }
+        .main header .nav ul li{
+            list-style: none;
+            width: 80px;
+            line-height: 30px;
+            float: left;
+            margin-left: 2px;
+            /*text-decoration: none;*/
+        }
+        .main header .nav ul li a{
+            text-decoration: none;
+            font-family:微软雅黑;
+            color: #454545;
+            line-height: 30px;
+            font-size: 15px;
+        }
+        .main header .nav ul li a:hover{
+            color: #ffffff;
+            text-decoration: underline;
+            /*font-weight: bold;*/
+        }
+        .main .content aside{
+            float: left;
+            width: 30%;
+            /*background: red;*/
+            /*opacity: 0.5;*/
+            background: #ffffff;
+        }
+        .main .content aside .headpic img{
+            width:280px ;
+            height: 210px;
+            margin: 20px auto;
+            display: block;
+        }
+        .main .content aside .name{
+            width: 280px;
+            height: 35px;
+            line-height: 35px;
+            border-bottom: 2px dashed #000;
+            border-top: 2px dashed #000;
+            text-align: center;
+            margin: 0px auto;
+            font-family: Arial;
+        }
+        .main .content aside .csseffect,.jseffect{
+           margin: 20px auto;
+            width: 80%;
+        }
+        .csseffect h4,.jseffect h4{
+            width: 250px;
+            height: 30px;
+            line-height: 30px;
+            background: grey;
+            text-indent: 0.7em;
+            font-family: 楷体;
+            border-radius: 3px 3px 3px 3px;
+            box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.3) ;
+        }
+        .csseffect ul,.jseffect ul{
+            width: 250px;
+            margin-top: 20px;
+        }
+        .csseffect ul li,.jseffect ul li{
+            list-style: none;
+            margin-top: 5px;
+            /*text-decoration: none;*/
+            border-bottom: 1px dashed rgba(0,0,0,0.5);
+            /*line-height: 30px;*/
+            height: 30px;
+            width: 100%;
+            text-indent: 1em;
+        }
+        .csseffect ul li a,.jseffect ul li a{
+            line-height: 30px;
+            font-family: 微软雅黑;
+            font-size: 14px;
+            text-decoration: none;
+            color: #000;
+            width: 100%;
+            /*text-indent: 1em;*/
+        }
+        .content aside li a:hover{
+            color: #0088bb;
+        }
+        .jseffect{
+            margin-top: 50px;
+        }
+        .main .content article{
+            width: 70%;
+            float: left;
+            /*background: red;*/
+            background: #ffffff;
+            height: 100%;
+            /*font-family: 仿宋;*/
+        }
+        .main .content article section{
+            width: 90%;
+            margin:50px auto 20px;
+            /*margin-top: 50px;*/
+            /*border: 1px solid red;*/
+            border-bottom: 1px dashed rgba(0,0,0,0.3);
+        }
+        .main .content article section h3{
+            border-bottom: 1px solid #000;
+            line-height: 30px;
+            font-family: 宋体;
+        }
+        .main .content article section .text{
+            line-height: 25px;
+            font-family: 宋体;
+            font-size: 13px;
+            margin-top: 20px;
+            text-indent: 2em;
+            margin-bottom: 20px;
+        }
+        .main .content article section div{
+            height: 30px;
+            width: 100%;
+        }
+        .main .content article section div .time{
+            width: 120px;
+            float: right;
+            font-family: 微软雅黑;
+            font-size: 13px;
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="img"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">网站首页</a></li>
+                    <li><a href="1202.html">我的寝室</a></li>
+                    <li><a href="selfintroduce.html">个人简历</a></li>
+                    <li><a href="#">我的博客</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+            <aside>
+                <div class="headpic">
+                    <img src="image/Stefanie07.jpg">
+                </div>
+                <p class="name">Yeachan的BLOG</p>
+                <div class="csseffect">
+                    <h4>CSS效果导航</h4>
+                    <ul>
+                        <li><a href="shadow.html">曲线阴影和翘边阴影</a></li>
+                        <li><a href="photo-wall.html">简单照片墙</a></li>
+                        <li><a href="cssmouseover.html">鼠标悬停效果</a></li>
+                        <li><a href="zuoceerjixuanfucaidan.html">左侧二级悬浮菜单效果</a></li>
+                    </ul>
+                </div>
+                <div class="jseffect">
+                    <h4>js&jQuery效果</h4>
+                    <ul>
+                        <li><a href="tupianlunbo.html">图片轮播</a></li>
+                        <li><a href="beijingqiehuan.html">换肤效果</a></li>
+                        <li><a href="shubiaoyihangbianlianghang.html">鼠标一行变两行</a></li>
+                        <li><a href="shoufengqing.html">手风琴效果</a></li>
+                        <li><a href="xuanxiangkadongtaiqiehuan.html">选项卡切换</a></li>
+                        <li><a href="xinxigundongxiaoguo.html">信息滚动</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <article>
+                <section>
+                    <h3>记第二次面试</h3>
+                    <p class="text">
+                        第二次面试是一次实习生面试，十月中旬我在实习僧上看到了美源信息技术咨询公司的招聘实习生的消息，
+                        之后我就抱着试一试的心情投了一份简历。之后在30号中午的时候我收到了他的面试邮件，
+                        让我在11月2号下午三点去那里面试。它所在的地点也离我比较近，是在教工路23号百脑汇大厦的12楼。
+                        下面再来重点讲讲面试经历，我到了之后一个学长给了我一份卷子让我到会议室做。那个卷子老实说和前端没有什么关系，
+                        一共也就五道题。比较难的有两道题，一道是将一句话里面的所有的单词的首字母改成大写，其他字母改成小写；
+                        另一道是将一段文字按固定的长度分段，当一个单词不能完整显示的时候就把整个单词放到下一段。因为我只会js，
+                        所以我就用js写这两道题。第一题还行，那第二题我不会用js去写，之后他让我用伪代码写，那我就把逻辑写了下。
+                        之后开始面试，面试官有两个人，看上去都很年轻，好像都是毕业不久的硕士生，我这里就称他们为学长学姐好了。
+                        他们其中的一个从事前端开发，另一个从事过前端开发。他们问的问题就很专业，比如会问我position的几种形态和各自的性质，
+                        还问了我一些动画的实现方式，还有一些页面流的问题。之后还问了我的一些需求。我感觉他们问的问题还是比较有难度的，
+                        有很多我概念模糊的，还有很多我不知道的。结束了就让我回去等通知了，给我的感觉是凶多吉少。
+                        不过通过这次面试我还是知道了自己的很多不足之处，那在接下来的学习中我就既要巩固基础又要全面提高能力。
+                    </p>
+                    <div><span class="time">2015-11-3</span></div>
+                </section>
+                <section>
+                    <h3>记第一次面试</h3>
+                    <p class="text">第一次面试是在西湖软件园，我去应聘的公司是昊美科技公司，是一家为电力、市政行业提供关键业务系统提供解决方案及服务支持的供应商。
+                        我到了那里后一个姐姐就给了我一份前端的卷子让我做。卷子其实不难，对我来说就两个难点，
+                        一个是CSS精灵，就是把很多图片都放到一张图上然后通过定位来选取需要的图片。我虽然用过这个但是我之前不知道这叫CSS Sprite。
+                        另一个是最后一题，说的是AJAX的跨域问题。由于我对AJAX了解的确实非常少，仅限于POST和GET两种方式，关于跨域我确实不知道，
+                        所以这道题我也没有做出来。我大概花了二十分钟做完了笔试卷子。之后就开始技术面试。技术面试的面试官就是昊美的前端工程师，
+                        他和我聊了聊一些技术相关的问题，也不难。他还告诉我昊美的前端工程师一般要做哪些工作，还有就是昊美比较注重哪些方面的的技术。
+                        因为他们有很多工作是帮助市政建设系统，而市政一般都用XP系统，所以他们比较注重网页的兼容性。还有就是现在他们有很多项目是做手机端系统的，
+                        所以要对手机网页制作有一定的了解。那我对于手机web的建设还是一知半解，接下来就要加深这方面的能力</p>
+                    <div><span class="time">2015-10-31</span></div>
+                </section>
+                <!--<section></section>-->
+            </article>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

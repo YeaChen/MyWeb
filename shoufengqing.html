@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico" media="screen">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            width: 1204px;
+            height: 260px;
+            margin: 50px auto;
+            background: #eeeeee;
+        }
+        .box ul li{
+            width: 172px;
+            height: 260px;
+            float: left;
+            list-style: none;
+        }
+        .box ul .pic1{
+            background: url("image/shoufengqing/1.jpg");
+            background-position: center;
+        }
+        .box ul .pic2{
+            background: url("image/shoufengqing/2.jpg");
+            background-position: center;
+        }
+        .box ul .pic3{
+            background: url("image/shoufengqing/3.jpg");
+            background-position: center;
+        }
+        .box ul .pic4{
+            background: url("image/shoufengqing/4.jpg");
+            background-position: center;
+        }
+        .box ul .pic5{
+            background: url("image/shoufengqing/5.jpg");
+            background-position: center;
+        }
+        .box ul .pic6{
+            background: url("image/shoufengqing/6.jpg");
+            background-position: center;
+        }
+        .box ul .pic7{
+            background: url("image/shoufengqing/7.jpg");
+            background-position: center;
+        }
+        .box ul li p{
+            width: 100%;
+            height: 230px;
+            background: rgba(0,0,0,0.3);
+            padding-top: 30px;
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .box ul li p span{
+            width: 30px;
+            height: 100%;
+            margin: 0px auto;
+            font-size: 30px;
+            display: block;
+        }
+        .box ul{
+            width: 2000px;
+        }
+        .back{
+            width: 100px;
+            height: 40px;
+            background: #eeeeee;
+            margin:50px auto;
+        }
+        .back a{
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            color: #000;
+            text-decoration: none;
+            display: block;
+            font-family: 微软雅黑;
+        }
+        .back a:hover{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="pic1" style="width: 172px">
+                <p style="display: block">
+                    <span>温泉酒店</span>
+                </p>
+            </li>
+            <li class="pic2" style="width: 172px">
+                <p style="display: block">
+                    <span>情侣酒店</span>
+                </p>
+            </li>
+            <li class="pic3" style="width: 172px">
+                <p style="display: block">
+                    <span>设计师酒店</span>
+                </p>
+            </li>
+            <li class="pic4" style="width: 172px">
+                <p style="display: block">
+                    <span>青年旅社</span>
+                </p>
+            </li>
+            <li class="pic5" style="width: 172px">
+                <p style="display: block">
+                    <span>特色客栈</span>
+                </p>
+            </li>
+            <li class="pic6" style="width: 172px">
+                <p style="display: block">
+                    <span>海岛酒店</span>
+                </p>
+            </li>
+            <li class="pic7" style="width: 172px">
+                <p style="display: block">
+                    <span>海外酒店</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="back"><a href="jseffect.html">返回上一页</a></div>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script>
+        $(".box ul li").hover(function () {
+            $(this).stop().animate({width:"400px"},300).siblings("li").stop().animate({width:"134px"},300);
+            $(this).find("p").hide().parent().siblings("li").find("p").show();
+        }, function () {
+            $(this).stop().animate({width:"172px"},300).siblings("li").stop().animate({width:"172px"},300)
+            $(this).find("p").show().parent().siblings("li").find("p").show();
+        })
+    </script>
+</body>
+</html>

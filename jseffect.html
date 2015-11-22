@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js特效展示</title>
+    <link type="image/x-icon" rel="shortcut icon" href="image/bitbug_favicon.ico">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .head{
+            height: 210px;
+            /*background-color: chartreuse;*/
+        }
+        .head .pic{
+            height: 150px;
+            width: 80%;
+            /*border-bottom: 2px solid #000;*/
+            margin: 10px auto;
+            box-shadow: 0px 0px 1px #000 ,
+            0px 0px 1px  #000 inset;
+            position: relative;
+            background: #ffffff;
+        }
+        .head .pic:after,.head .pic:before{
+            content: "";
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 0px;
+            /*background: red;*/
+            position: absolute;
+            border-radius: 100px/10px;
+            box-shadow: 0 0px 10px #000;
+            z-index: -1;
+        }
+        .head .pic p{
+            width: 550px;
+            height: 100px;
+            margin: 0px auto;
+            padding-top: 50px;
+            font-family: 仿宋;
+            font-size: 40px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px #000,
+            2px 2px 10px #eee,
+            5px 5px 10px gray  ;
+            position: relative;
+            margin: 0px auto;
+            word-spacing: 1px;
+            text-align: center;
+        }
+        .head .title{
+            height: 50px;
+            font-family: 微软雅黑;
+            background-color: #add8e6;
+        }
+        .head .title div{
+            float: left;
+            line-height: 50px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            word-spacing: 1px;
+        }
+        .head .title ul{
+            height: 50px;
+            float: right;
+            line-height: 50px;
+        }
+        .head .title ul li{
+            width: 70px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 20px;
+        }
+        .head .title ul li a{text-decoration: none;color:#000;line-height: 50px;text-align: center;width: 50px}
+        .head .title ul li a:hover{
+            color: #ffffff;
+
+        }
+        .main .effects{
+            width: 80%;
+            margin: 0px auto;
+        }
+        .main .effects li{
+            width: 100%;
+            height: 250px;
+            list-style: none;
+            margin: 20px;
+        }
+        .main .effects li:hover{
+            border: 2px solid red;
+        }
+        .main .effects li a{
+            text-decoration: none;
+            font-family: 微软雅黑;
+            color: #000;
+        }
+        .main .effects li a .content{
+            width: 100%;
+            height: 300px;
+        }
+        .main .effects li .content img{
+            width: 320px;
+            height: 250px;
+            float: left;
+        }
+        .main .effects li .content .txt{
+            float:left;
+            margin-left: 20px;
+        }
+        .main .effects li .content .txt p{
+            margin-top: 15px;
+            height: 10px;
+            width: 700px;
+        }
+        .foot{
+            height: 150px;
+            background-color:#556b6f;
+            opacity: 0.5;
+        }
+        .foot ul{
+            width: 600px;
+            height: 30px;
+            margin: 0px auto;
+        }
+        .foot ul li{
+            width: 100px;
+            height: 20px;
+            float: left;
+            margin: 30px 50px 20px 50px;
+        }
+        .foot li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 微软雅黑;
+        }
+        .foot ul li a:hover{
+            color: #000;
+            opacity: 1;
+        }
+        .foot .p1{
+            color: #ffffff;
+            margin: 10px auto;
+            clear: both;
+            width:200px;
+            text-align: center;
+            line-height: 20px;
+            height: 20px;
+        }
+        .foot .p2{
+            width: 800px;
+            margin: 5px auto;
+            color: #ffffff;
+            text-indent: 2em;
+        }
+        .btn{
+            position: fixed;
+            width: 20px;
+            height: 90px;
+            background: #eeeeee;
+            top: 350px;
+            right:80px;
+            text-align: center;
+            font-family:微软雅黑;
+            font-size: 15px;
+            display: none;
+        }
+        .btn:hover{
+            background: gray;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+    <div class="pic"><p>js特效展示</p></div>
+    <div class="title">
+        <div>Mr Bigshot</div>
+        <ul>
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="1202.html">我的寝室</a></li>
+            <li><a href="selfintroduce.html">个人简历</a></li>
+            <li><a href="css3effect.html">返回上页</a></li>
+        </ul>
+    </div>
+</header>
+    <div class="main">
+        <ul class="effects">
+            <li><a href="tupianlunbo.html">
+                <div class="content">
+                    <img src="image/Stefanie08.jpg">
+                    <div class="txt">
+                        <h3>图片轮播效果</h3>
+                        <p>重点：css中animation特性的使用，jQuery中全局变量和局部变量的使用，setInterval的使用。</p>
+                    </div>
+                </div>
+            </a></li>
+            <li><a href="beijingqiehuan.html">
+                <div class="content">
+                    <img src="image/Stefanie08.jpg">
+                    <div class="txt">
+                        <h3>换肤效果</h3>
+                        <p>重点：css中animation特性的使用，jQuery中用attr()获取元素特性，用css()改变元素的样式。</p>
+                        <p>注意点：css的兼容问题。包括其中的animation和@keyframes的兼容性。其中-o-代表opera浏览器；
+                            -ms-代表ie浏览器；-webkit-代表chrome和safari浏览器；-moz-代表Firefox浏览器。</p>
+                    </div>
+                </div>
+            </a></li>
+            <li><a href="shubiaoyihangbianlianghang.html">
+                <div class="content">
+                    <img src="image/Stefanie08.jpg">
+                    <div class="txt">
+                        <h3>鼠标一行变两行效果</h3>
+                        <p>重点：jQuery中的hover的使用和用parent搜索父类</p>
+                    </div>
+                </div>
+            </a></li>
+            <li><a href="xuanxiangkadongtaiqiehuan.html">
+                <div class="content">
+                    <img src="image/Stefanie08.jpg">
+                    <div class="txt">
+                        <h3>选项卡新闻动态切换</h3>
+                        <p>重点：与图片轮播基本一致</p>
+                    </div>
+                </div>
+            </a></li>
+            <li><a href="shoufengqing.html">
+                <div class="content">
+                    <img src="image/Stefanie08.jpg">
+                    <div class="txt">
+                        <h3>图片手风琴效果的实现</h3>
+                        <p>重点：jQuery中animation效果的实现</p>
+                        <p>注意点：为了使图片切换更加自然适当运用.stop()</p>
+                    </div>
+                </div>
+            </a></li>
+            <li><a href="xinxigundongxiaoguo.html">
+                <div class="content">
+                    <img src="image/Stefanie08.jpg">
+                    <div class="txt">
+                        <h3>信息滚动效果</h3>
+                        <p>重点：js中的scrollTop的理解和应用</p>
+                        <p>注意点：方法的调用</p>
+                    </div>
+                </div>
+            </a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+        <div class="btn" id="btn">返回顶部</div>
+    </div>
+    <footer class="foot">
+    <ul>
+        <li><a href="http://weibo.com/Mrbigshotday/profile?rightmod=1&wvr=6&mod=personinfo">我的微博</a></li>
+        <li><a href="#">我的推特</a></li>
+        <li><a href="http://tieba.baidu.com/home/main?un=Mrbigshotday&fr=index">我的贴吧</a></li>
+    </ul>
+    <p class="p1">@Mr Bigshot</p>
+
+    <p class="p2">本网站只作为学习网站，而非商业用途网站。网站资源均来自于互联网。如果本网站的内容侵犯了您的专利或者权益，请联系QQ:1432914819，我们将立即处理。谢谢！</p>
+</footer>
+<script>
+   window.onload= function () {
+       var btn=document.getElementById("btn");
+
+       window.onscroll= function () {
+           var all=document.documentElement.clientHeight;
+           var scroll=document.body.scrollTop;
+           if(scroll>all){
+               btn.style.display="block";
+           }else{
+               btn.style.display="none";
+           }
+       }
+       btn.onclick=function (){
+           var timer=setInterval(function () {
+               var sTop=document.body.scrollTop;
+               document.body.scrollTop=sTop-sTop/5;
+               if(sTop==0){
+                   clearInterval(timer);
+               }
+           },30);
+//            document.body.scrollTop=0;
+       }
+   }
+</script>
+</body>
+</html>

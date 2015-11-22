@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>玉泉30舍1122</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico" media="screen">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .head{
+        height: 300px;
+    }
+    .head .pic {
+        height: 250px;
+        border-bottom: 2px solid #000;
+    }
+
+    .head .pic p {
+        width: 400px;
+        height: 100px;
+        margin: 0px auto;
+        padding-top: 100px;
+        font-family: Arial;
+        font-size: 50px;
+        font-weight: 900;
+        text-shadow: 2px 2px 5px #000,
+        5px 5px 10px #eee,
+        10px 10px 10px gray;
+        animation: turn 5s ease-in-out infinite;
+        -ms-animation: turn 5s ease-in-out infinite;
+        -moz-animation: turn 5s ease-in-out infinite;
+        -webkit-animation: turn 5s ease-in-out infinite;
+        -o-animation: turn 5s ease-in-out infinite;
+
+        position: relative;
+        text-align:center;
+    }
+
+    @keyframes turn {
+        0% {
+            left: -200px;
+            transform: rotate(15deg);
+        }
+        50% {
+            left: 200px;
+            transform: rotate(-15deg);
+        }
+        100% {
+            left: -200px;
+            transform: rotate(15deg);
+        }
+    }
+    @-ms-keyframes turn {
+        0% {
+            left: -200px;
+            transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+
+        }
+        50% {
+            left: 200px;
+            transform: rotate(-15deg);
+            -ms-transform: rotate(-15deg);
+
+        }
+        100% {
+            left: -200px;
+            transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+        }
+    }
+    @-moz-keyframes turn {
+        0% {
+            left: -200px;
+            transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+
+        }
+        50% {
+            left: 200px;
+            transform: rotate(-15deg);
+            -moz-transform: rotate(-15deg);
+        }
+        100% {
+            left: -200px;
+            transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+        }
+    }
+    @-webkit-keyframes turn{
+
+        0% {
+            left: -200px;
+            transform: rotate(15deg);
+            -webkit-transform: rotate(15deg);
+        }
+        50% {
+            left: 200px;
+            transform: rotate(-15deg);
+            -webkit-transform: rotate(-15deg);
+        }
+        100% {
+            left: -200px;
+            transform: rotate(15deg);
+            -webkit-transform: rotate(15deg);
+        }
+    }
+
+    @-o-keyframes turn{
+
+        0% {
+            left: -200px;
+            -o-transform: rotate(15deg);
+        }
+        50% {
+            left: 200px;
+            -o-transform: rotate(-15deg);
+        }
+        100% {
+            left: -200px;
+            -o-transform: rotate(15deg);
+        }
+    }
+
+    .head .title {
+        height: 50px;
+        font-family: 微软雅黑;
+        background: #008b8b;
+    }
+
+    .head .title div {
+        float: left;
+        line-height: 50px;
+        margin-left: 50px;
+        font-size: 20px;
+        font-weight: 700;
+        word-spacing: 1px;
+    }
+
+    .head .title ul {
+        height: 50px;
+        float: right;
+        line-height: 50px;
+    }
+
+    .head .title ul li {
+        width: 70px;
+        display: inline-block;
+        line-height: 50px;
+        margin-right: 20px;
+    }
+
+    .head .title ul li a {
+        text-decoration: none;
+        color: #000
+    }
+
+    .head .title ul li a:hover {
+        color: deeppink;
+    }
+    .content{
+        /*position: relative;*/
+    }
+    .content ul{
+        width: 90%;
+        height: 550px;
+        margin: 0px auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .content ul li{
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        float: left;
+    }
+    .content ul li img{
+        width: 100%;
+        height: 100%;
+    }
+    .left{
+        position: absolute;
+        left: 0px;
+        top: 200px;
+        width: 50px;
+        height: 100px;
+        /*background: blue;*/
+        line-height: 100px;
+        text-align: center;
+        opacity: 0;
+        background: rgba(100,50,50,0.5);
+        cursor: pointer;
+    }
+    .right{
+        position: absolute;
+        right: 0px;
+        top: 200px;
+        width: 50px;
+        height: 100px;
+        /*background: blue;*/
+        line-height: 100px;
+        text-align: center;
+        background: rgba(100,50,50,0.5);
+        opacity: 0;
+        cursor: pointer;
+    }
+    .foot{
+        height: 150px;
+        background-color: darkgreen;
+        opacity: 0.5;
+    }
+    .content ul:hover .left{
+        opacity: 1;
+    }
+    .content ul:hover .right{
+        opacity: 1;
+    }
+    .foot ul {
+        width: 600px;
+        height: 30px;
+        margin: 0px auto;
+    }
+
+    .foot ul li {
+        width: 100px;
+        height: 20px;
+        float: left;
+        margin: 30px 50px 20px 50px;
+    }
+
+    .foot li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 微软雅黑;
+    }
+
+    .foot .p1{
+        color: #ffffff;
+        margin: 10px auto;
+        clear: both;
+        width: 200px;
+        text-align: center;
+        line-height: 20px;
+        height: 20px;
+    }
+
+    .foot .p2{
+        width: 800px;
+        margin: 5px auto;
+        color: #ffffff;
+        text-indent: 2em;
+    }
+</style>
+<body>
+<header class="head">
+    <div class="pic"><p>30舍1122</p></div>
+    <div class="title">
+        <div>Mr Bigshot</div>
+        <ul>
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="1202.html">我的寝室</a></li>
+            <li><a href="selfintroduce.html">个人简历</a></li>
+            <li><a href="myblog.html">我的博客</a></li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <ul>
+        <li><img src="image/westlake/1.jpg"></li>
+        <li><img src="image/westlake/3.jpg"></li>
+        <!--<li><img src="image/westlake/9.jpg"></li>-->
+        <li><img src="image/westlake/11.jpg"></li>
+        <div class="left">&lt</div>
+        <div class="right">&gt</div>
+    </ul>
+
+</div>
+<footer class="foot">
+    <ul>
+        <li><a href="http://weibo.com/Mrbigshotday/profile?rightmod=1&wvr=6&mod=personinfo">我的微博</a></li>
+        <li><a href="#">我的推特</a></li>
+        <li><a href="http://tieba.baidu.com/home/main?un=Mrbigshotday&fr=index">我的贴吧</a></li>
+    </ul>
+    <p class="p1">@Mr Bigshot</p>
+
+    <p class="p2">本网站只作为学习网站，而非商业用途网站。网站资源均来自于互联网。如果本网站的内容侵犯了您的专利或者权益，请联系QQ:1432914819，我们将立即处理。谢谢！</p>
+</footer>
+<script src="jquery-2.1.4.min.js"></script>
+<script>
+    var i=0;
+    $(".content ul .right").on("click", function () {
+        if(i<2){
+            i++;
+        }else{
+            i=0;
+        }
+        $(".content ul li").eq(i).fadeIn(300).siblings("li").fadeOut(300);
+    });
+    $(".content ul .left").on("click", function () {
+        if(i>0){
+            i--;
+        }else{
+            i=2;
+        }
+        $(".content ul li").eq(i).fadeIn(300).siblings("li").fadeOut(300);
+    })
+</script>
+</body>
+</html>

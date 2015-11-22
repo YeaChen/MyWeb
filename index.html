@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人博客</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/bitbug_favicon.ico" media="screen">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .head{
+            height: 210px;
+            /*background-color: chartreuse;*/
+        }
+        .head .pic{
+            height: 150px;
+            width: 80%;
+            /*border-bottom: 2px solid #000;*/
+            margin: 10px auto;
+            box-shadow: 0px 0px 1px #000 ,
+                        0px 0px 1px  #000 inset;
+            position: relative;
+            background: #ffffff;
+        }
+        .head .pic:after,.head .pic:before{
+            content: "";
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 0px;
+            /*background: red;*/
+            position: absolute;
+            border-radius: 100px/10px;
+            box-shadow: 0 0px 10px #000;
+            z-index: -1;
+        }
+        .head .pic p{
+            width: 550px;
+            height: 100px;
+            margin: 0px auto;
+            padding-top: 50px;
+            font-family: 仿宋;
+            font-size: 40px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px #000,
+                          2px 2px 10px #eee,
+                          5px 5px 10px gray  ;
+            position: relative;
+            margin: 0px auto;
+            word-spacing: 1px;
+            text-align: center;
+        }
+        .head .title{
+           height: 50px;
+            font-family: 微软雅黑;
+            background-color: #add8e6;
+        }
+        .head .title div{
+            float: left;
+            line-height: 50px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            word-spacing: 1px;
+        }
+        .head .title ul{
+           height: 50px;
+            float: right;
+            line-height: 50px;
+        }
+        .head .title ul li{
+            width: 70px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 20px;
+        }
+        .head .title ul li a{text-decoration: none;color:#000;line-height: 50px;text-align: center;width: 50px}
+        .head .title ul li a:hover{
+            color: #ffffff;
+
+        }
+        .main{
+            height: 1400px;
+            background: #eeeeee;
+        }
+        .main .content{
+            height: 300px;
+            /*display: none;*/
+        }
+        .main .content1{
+            background-color: rgba(0,0,0,0.5);
+            height: 500px;
+        }
+        .main .content1 .wrapper{
+            width: 800px;
+            margin: 0px auto;
+            color: #ffffff;
+        }
+        .main .content1 .wrapper h1{
+           text-align: center;
+            padding-top: 50px;
+            font-family: 微软雅黑;
+        }
+
+        .main .content1 .wrapper .line{
+            width: 800px;
+            height: 1px;
+            background: #ffffff;
+            margin: 50px auto;
+        }
+        .main .content1 .wrapper p{
+            margin: 20px auto;
+            width: 500px;
+            line-height: 25px;
+            font-family: 微软雅黑;
+        }
+        .main .content1 .wrapper .more{
+            margin: 150px auto;
+            width: 50px;
+            height: 20px;
+            font-family: 微软雅黑;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        .main .content2{
+            background: rgba(0,255,0,0.8);
+            transform: translate(1000px,0px);
+            opacity: 0;
+        }
+        .main .content2 img{
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        .main .content2 div{
+            text-align: center;
+            line-height: 300px;
+            font-family: 微软雅黑;
+            font-size: 40px;
+        }
+        .main .content2 div a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .main .content2 div a:hover{
+            color: darkred;
+        }
+        .main .content3{
+            background: rgba(236,105,165,0.8);
+            transform: translate(-1000px,0px);
+            opacity: 0;
+        }
+        .main .content3 img{
+            width: 300px;
+            height: 300px;
+            float: right;
+        }
+        .main .content3 div{
+            line-height: 300px;
+            font-family: 微软雅黑;
+            font-size: 40px;
+            float: left;
+            text-align: center;
+            width: 1000px;
+        }
+        .main .content3 div a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            width: 100%;
+            clear: both;
+        }
+        .main .content3 div a:hover{
+            color: darkred;
+        }
+        .main .content4{
+            background-color: greenyellow;
+            transform:translate(1000px,0);
+            opacity: 0;
+        }
+        .main .content4 img{
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+        .main .content4 div{
+            text-align: center;
+            line-height: 300px;
+        }
+        .main .content4 a{
+            text-align: center;
+            line-height: 300px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 700;
+            font-family: 微软雅黑;
+        }
+        .main .content4 a:hover{
+            color: darkred;
+        }
+        .foot{
+            height: 150px;
+            background-color: darkgreen;
+            opacity: 0.5;
+        }
+        .foot ul{
+            width: 600px;
+            height: 30px;
+            margin: 0px auto;
+        }
+        .foot ul li{
+            width: 100px;
+            height: 20px;
+            float: left;
+            margin: 30px 50px 20px 50px;
+        }
+        .foot li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 微软雅黑;
+        }
+        .foot ul li a:hover{
+            color: #000;
+            opacity: 1;
+        }
+        .foot .p1{
+            color: #ffffff;
+            margin: 10px auto;
+            clear: both;
+            width:200px;
+            text-align: center;
+            line-height: 20px;
+            height: 20px;
+        }
+        .foot .p2{
+            width: 800px;
+            margin: 5px auto;
+            color: #ffffff;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="pic"><p>Mr Bigshot的学习小站</p></div>
+        <div class="title">
+            <div>Mr Bigshot</div>
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="1202.html">我的寝室</a></li>
+                <li><a href="selfintroduce.html">个人简历</a></li>
+                <li><a href="myblog.html">我的博客</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <div class="content1">
+            <div class="wrapper">
+                <h1>Mr Bigshot的学习小站</h1>
+                <div class="line"></div>
+                <p>此网站仅用于前端知识的学习交流，只作为学习网站，而非商业用途网站。网站资源均来自于互联网。如果本网站的内容侵犯了您的专利或者权益，请联系QQ :1432914819，我们将立即处理。谢谢！</p>
+                <div class="more">更多</div>
+            </div>
+        </div>
+        <div class="content content2">
+            <img src="image/stefanie01.jpg">
+            <div><a href="css3effect.html" target="_blank">CSS3效果：阴影以及动画</a></div>
+        </div>
+        <div class="content content3">
+            <div><a href="jseffect.html">Javascript&jQuery效果：图片轮播、侧边栏等</a></div>
+            <img src="image/Stefanie09.jpg">
+        </div>
+        <div class="content content4">
+            <img src="image/Stefanie03.jpg">
+            <div><a href="back.html">手机网页(测试页面，慎点)</a></div>
+        </div>
+    </div>
+    <footer class="foot">
+        <ul>
+            <li><a href="http://weibo.com/Mrbigshotday/profile?rightmod=1&wvr=6&mod=personinfo">我的微博</a></li>
+            <li><a href="#">我的推特</a></li>
+            <li><a href="http://tieba.baidu.com/home/main?un=Mrbigshotday&fr=index">我的贴吧</a></li>
+        </ul>
+        <p class="p1">@Mr Bigshot</p>
+        <p class="p2">本网站只作为学习网站，而非商业用途网站。网站资源均来自于互联网。如果本网站的内容侵犯了您的专利或者权益，请联系QQ:1432914819，我们将立即处理。谢谢！</p>
+    </footer>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script>
+       $(function () {
+//           var a = 50;
+           var b = 150;
+           var c = 400;
+           var d = 650;
+//           $(window).scroll(function () {
+//               var s=$(window).scrollTop();
+//               if(s>a){
+//                   $(".content1").fadeIn(2000);
+//               }
+//           })
+           $(window).scroll(function () {
+               var s = $(window).scrollTop();
+               if (s > b) {
+                   $(".content2").css({
+                       "transform":"translate(0px,0px)",
+                       "transition":"2s",
+                       "opacity":"1"
+                   })
+               }
+           })
+           $(window).scroll(function () {
+               var s = $(window).scrollTop();
+               if (s > c) {
+                   $(".content3").css({
+                       "transform":"translate(0px,0px)",
+                       "transition":"2s",
+                        "opacity":"1"
+                   });
+               }
+           })
+           $(window).scroll(function () {
+               var s = $(window).scrollTop();
+               if (s > d) {
+                   $(".content4").css({
+                       "transform":"translate(0,0)",
+                       "transition":"2s",
+                       "opacity":"1"
+                   });
+               }
+           })
+       })
+    </script>
+</body>
+</html>
